@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: o5i5eb97v-go-gitops
+  description: This is GitOps manifest for o5i5eb97v-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: o5i5eb97v-go
+    janus-idp.io/tekton: o5i5eb97v-go 
+    backstage.io/kubernetes-id: o5i5eb97v-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:o5i5eb97v-go
